@@ -1,0 +1,22 @@
+.resumecontainer {
+  background-color: #ffffff;
+  width: 1200px;
+  height: 100%;
+}
+
+.photocontainer {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+}
+
+.namecontainer > input {
+  background-color: purple;
+  width: 500px;
+  height: 70px;
+}
+.titlecontainer > input {
+  background-color: peru;
+  width: 500px;
+  height: 70px;
+}
