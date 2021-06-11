@@ -8,12 +8,13 @@ function Workexperience() {
     setAdd([...add, <Addexperience />]);
   };
   return (
-    <div className="workexperiencecontainer">
-      <div className="header">
+    <div className="experiencestage">
+      <div className="experienceheader">
         <h2>Work Experience</h2>
         <button onClick={submitHandler}>+</button>
       </div>
-      <div>
+      <div className="experiencedescription">
+        <Addexperience/>
         {add.map((experiences) => (
           <Addexperience />
         ))}

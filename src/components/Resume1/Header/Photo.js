@@ -29,9 +29,9 @@ function Photo() {
         style={{
           background: `url("${photo}") no-repeat center/cover`,
         }}
-      ></div>
-      <input type="file" name="Add Photo" id="" onChange={photoHandler} />
-      <button onClick={removeHandler}>Remove Photo</button>
+      >  <input type="file" name="Add Photo" id="" onChange={photoHandler} className="addphoto" />
+      <button onClick={removeHandler}>Remove Photo</button></div>
+    
     </div>
   );
 }
