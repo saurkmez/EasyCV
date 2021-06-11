@@ -2,21 +2,67 @@
   background-color: #ffffff;
   width: 1200px;
   height: 100%;
+  display: flex;
 }
-
+.leftside {
+  background-color: blueviolet;
+  width: 30%;
+  height: 100%;
+}
+.rightside {
+  background-color: cadetblue;
+  width: 70%;
+  height: 100%;
+}
 .photocontainer {
-  background-color: blue;
-  width: 200px;
-  height: 200px;
+  background-color: white;
+  width: 70%;
+  height: 20%;
 }
 
 .namecontainer > input {
   background-color: purple;
-  width: 500px;
+  width: 60%;
   height: 70px;
 }
 .titlecontainer > input {
   background-color: peru;
-  width: 500px;
+  width: 60%;
   height: 70px;
+}
+.workexperiencecontainer {
+  width: 500px;
+  height: 500px;
+  background-color: aqua;
+}
+
+.header {
+  width: 100%;
+  height: 30px;
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.addexperience {
+  width: 80%;
+  height: 30px;
+  background-color: blanchedalmond;
+}
+
+.profilecontainer {
+  width: 100%;
+  min-height: 100px;
+  background-color: tomato;
+}
+.personaldetailscontainer {
+  width: 100%;
+  min-height: 100px;
+  background-color: orange;
+}
+.contactcontainer {
+  width: 100%;
+  min-height: 100px;
+  background-color: grey;
 }
