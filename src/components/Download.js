@@ -4,7 +4,7 @@ function Download() {
   return (
     <div>
       <div className="downloadcontainer">
-        <button>İndir</button>
+        <i class="far fa-save fa-3x"></i>
       </div>
     </div>
   );

@@ -1,26 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import Addlist from "./Addlist";
 function Addexperience() {
-  return <div >
-
-    
-<h3 contenteditable="true" spellcheck="false">
-        Envest Enerji ve Su Teknolojileri
-        
+  const [list, setList] = useState([]);
+  const listHandler = (e) => {
+    e.preventDefault();
+    setList([...list, <Addlist />]);
+  };
+  return (
+    <div>
+      <h3 contentEditable="true" spellCheck="false">
+        Company
       </h3>
       <div className="jobtitledate">
-      <h4 contenteditable="true" spellcheck="false">
-        Mechatronics Engineer
-        
-      </h4>
-      <h3 contenteditable="true" spellcheck="false">
-       09.2019-Now
-        
-      </h3>
+        <h4
+          contentEditable="true"
+          spellCheck="false"
+          style={{ color: "#c66259" }}
+        >
+          Title
+        </h4>
+        <h3
+          contentEditable="true"
+          spellCheck="false"
+          style={{ color: "#c66259" }}
+        >
+          Date
+        </h3>
       </div>
-      <p contenteditable="true" spellcheck="false">
-        Açıklama
-        
-      </p></div>;
+
+      <div className="addliststage">
+        <div className="addlistpluscontainer">
+          <Addlist />
+          <i
+            onClick={listHandler}
+            className="far fa-plus-square fa-1x"
+            style={{ marginLeft: "2%", color: "#c66259" }}
+          ></i>
+        </div>
+
+        {list.map((listAdd) => (
+          <Addlist />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Addexperience;

@@ -1,5 +1,5 @@
-*{
-  font-family: 'Libre Baskerville', serif;
+* {
+  font-family: "Libre Baskerville", serif;
 }
 
 .resumecontainer {
@@ -8,53 +8,66 @@
   height: 100%;
   margin-top: 2%;
   margin-bottom: 2%;
-
 }
-.subresumecontainer{
-  margin:5%
+.subresumecontainer {
+  margin: 5%;
 }
 /*HEADER*/
 
-.resumeheader{
-
+.resumeheader {
   background-color: #223238;
   width: 100%;
-  height:30% ;
+  height: 30%;
   display: flex;
   align-items: center;
   justify-content: left;
-  
 }
 
 .photocontainer {
-  background-color: purple;
   width: 27%;
-  height: 100%;
+  height: auto;
+  display: flex;
+  background-image: image();
+  justify-content: center;
 }
-.photo{
+.photo {
   width: 100%;
   height: 200px;
+  display: flex;
+  align-items: top;
+}
+.addbuttoncontainer {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-
-.headerrightside{
+.addbuttoncontainer:hover {
+  opacity: 1;
+}
+input[type="file"] {
+  display: none;
+}
+.headerrightside {
   width: 50%;
   height: auto;
   margin-left: 4%;
 }
 .namecontainer > h2 {
-  
   width: 100%;
   height: 10%;
 }
 .titlecontainer > h2 {
-  
   width: 100%;
   height: 10%;
 }
 /*PROFILE*/
 .profilestage {
-  background-color: blueviolet;
   width: 100%;
   height: auto;
   display: flex;
@@ -62,132 +75,145 @@
 }
 .profileheader {
   width: 30%;
+  color: #c66259;
   height: 100%;
   background-color: white;
   display: flex;
   align-items: center;
 }
-.profiledescription{
+.profiledescription {
   width: 80%;
   height: 100%;
-  background-color: violet;
+
   display: flex;
   align-items: center;
 }
 /*EXPERIENCES*/
 
 .experiencestage {
-  background-color: olive;
   height: auto;
-    display: flex;
-    align-items: center;
-  }
-.experienceheader{
+  display: flex;
+  align-items: center;
+}
+.experienceheader {
   width: 30%;
   height: auto;
-  background-color: white;
+
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  color: #c66259;
 }
-.experiencedescription{
+.experiencedescription {
   width: 80%;
   height: auto;
-  background-color: violet;
-  
 }
-.jobtitledate{
+.jobtitledate {
   display: flex;
   align-items: center;
-  background-color: linen;
+
   width: 100%;
   height: 30px;
   justify-content: space-between;
   margin-top: -5px;
 }
-    
+.addliststage {
+  width: 100%;
+  height: auto;
+
+  padding-bottom: 2px;
+}
+.addlistpluscontainer {
+  display: flex;
+  align-items: center;
+  height: 15px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
 /*SKILLS*/
 
-
-.skillstage{
-  background-color: orchid;
-  height: 100px;
+.skillstage {
+  height: auto;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
-.skillheader{
+.skillheader {
   width: 30%;
   height: 100%;
   background-color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  color: #c66259;
 }
-.skilldescription{
+.skilldescription {
   width: 80%;
-  height: 100%;
-  background-color: violet;
-  display: flex;
-  align-items: center;
+  height: auto;
+
+  columns: 2;
 }
 /*LANGUAGE*/
-.languagestage{
-  background-color: orchid;
-  height: 100px;
+.languagestage {
+  height: auto;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
-.languageheader{
+.languageheader {
   width: 30%;
   height: 100%;
   background-color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  color: #c66259;
 }
-.languagedescription{
+.languagedescription {
   width: 80%;
-  height: 100%;
-  background-color: violet;
-  display: flex;
-  align-items: center;
+  height: auto;
+}
+.addlanguagecontainer {
+  width: 50%;
+  height: auto;
 }
 /*EDUCATION*/
-.educationstage{
-  background-color: orchid;
-  height: 100px;
+.educationstage {
+  height: auto;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
-.educationheader{
+.educationheader {
   width: 30%;
   height: 100%;
-  background-color: white;
+
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  color: #c66259;
 }
-.educationdescription{
+.educationdescription {
   width: 80%;
-  height: 100%;
-  background-color: violet;
-  display: flex;
-  align-items: center;
+  height: auto;
 }
 /*CONTACT*/
-.contactstage{
-  background-color: orchid;
-  height: 100px;
-  display: flex;
-    align-items: center;
-}
-.contactheader{
-  width: 30%;
-  height: 100%;
-  background-color: white;
+.contactstage {
+  height: auto;
   display: flex;
   align-items: center;
 }
-.contactdescription{
-  width: 80%;
+.contactheader {
+  width: 30%;
   height: 100%;
-  background-color: violet;
+
+  display: flex;
+  align-items: center;
+  color: #c66259;
+}
+.contactdescription {
+  width: 80%;
+  height: auto;
+}
+.mail {
+  width: 100%;
   display: flex;
   align-items: center;
 }

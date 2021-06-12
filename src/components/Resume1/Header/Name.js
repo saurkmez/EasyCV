@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Name() {
- 
   return (
     <div className="namecontainer">
-   <h1 contenteditable="true" spellcheck="false" style={{color:"white"}} >
+      <h1 contentEditable="true" spellCheck="false" style={{ color: "white" }}>
         Alper Ürkmez
       </h1>
     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Photo() {
-  const [photo, setPhoto] = useState("Fotoğraf Ekle");
+  const [photo, setPhoto] = useState("asas");
 
   const photoHandler = (e) => {
     const selected = e.target.files[0]; //İlk dosyayı alır
@@ -16,12 +16,16 @@ function Photo() {
         setPhoto(reader.result);
       };
     } else {
-      console.log("yanlış");
+      console.log("fick dich");
     }
   };
   const removeHandler = () => {
     setPhoto("");
   };
+  const showHandler = () => {
+    console.log("siktir");
+  };
+
   return (
     <div className="photocontainer">
       <div
@@ -29,9 +33,25 @@ function Photo() {
         style={{
           background: `url("${photo}") no-repeat center/cover`,
         }}
-      >  <input type="file" name="Add Photo" id="" onChange={photoHandler} className="addphoto" />
-      <button onClick={removeHandler}>Remove Photo</button></div>
-    
+      >
+        <div className="addbuttoncontainer" onMouseOver={showHandler}>
+          <i
+            class="fas fa-trash fa-2x"
+            onClick={removeHandler}
+            style={{ cursor: "pointer" }}
+          ></i>
+
+          <label htmlFor="fileupload">
+            <i class="fas fa-upload fa-2x" style={{ cursor: "pointer" }}></i>
+          </label>
+          <input
+            type="file"
+            id="fileupload"
+            className="popupbutton"
+            onChange={photoHandler}
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -11,10 +11,15 @@ function Workexperience() {
     <div className="experiencestage">
       <div className="experienceheader">
         <h2>Work Experience</h2>
-        <button onClick={submitHandler}>+</button>
+
+        <i
+          onClick={submitHandler}
+          className="far fa-plus-square fa-2x"
+          style={{ marginRight: "10%" }}
+        ></i>
       </div>
       <div className="experiencedescription">
-        <Addexperience/>
+        <Addexperience />
         {add.map((experiences) => (
           <Addexperience />
         ))}

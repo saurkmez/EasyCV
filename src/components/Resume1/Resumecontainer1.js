@@ -5,30 +5,47 @@ import Title from "./Header/Title";
 import "./Resume1.css";
 import Workexperience from "./WorkExperiences/Workexperience";
 import Profile from "./Profile";
-import Skills from './Skills'
+import Skills from "./Skills/Skills";
 import Contact from "./Contact";
-import Languages from "./Languages";
-import Education from "./Education";
+import Languages from "./Language/Languages";
+import Education from "./Education/Education";
 
 function Resumecontainer1() {
   return (
-    
     <div className="resumecontainer">
       <div className="subresumecontainer">
-      <div className="resumeheader"> <Photo/>
-      <div className="headerrightside">
-      <Name/>
-      <Title/>
+        <div className="resumeheader">
+          {" "}
+          <Photo />
+          <div className="headerrightside">
+            <Name />
+            <Title />
+          </div>
+        </div>
+        <div>
+          <Profile />
+        </div>
+        <hr />
+        <div>
+          <Workexperience />
+        </div>
+        <hr />
+        <div>
+          <Skills />
+        </div>
+        <hr />
+        <div>
+          <Languages />
+        </div>
+        <hr />
+        <div>
+          <Education />
+        </div>
+        <hr />
+        <div>
+          <Contact />
+        </div>
       </div>
-     
-      </div>
-    <div ><Profile/></div>
-    <div><Workexperience/></div>
-    <div><Skills/></div>
-    <div ><Languages/></div>
-    <div><Education/></div>
-    <div><Contact/></div>
-    </div>
     </div>
   );
 }
