@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Addeducation from "./Addeducation";
 
-function Education() {
+function Education({ brandfontsize, brandcolor }) {
   const [education, setEducation] = useState([]);
   const languageHandler = () => {
     setEducation([...education, <Addeducation />]);
@@ -11,7 +11,11 @@ function Education() {
     <div className="educationstage">
       <div className="educationheader">
         {" "}
-        <h2 contentEditable="true" spellCheck="false">
+        <h2
+          contentEditable="true"
+          spellCheck="false"
+          style={{ fontSize: brandfontsize, color: brandcolor }}
+        >
           Education
         </h2>
         <i

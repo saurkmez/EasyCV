@@ -1,12 +1,12 @@
 import React from "react";
 
-function Title() {
+function Title({ titlecolor, titlesize }) {
   return (
     <div className="titlecontainer">
       <h2
         contentEditable="true"
         spellCheck="false"
-        style={{ color: "#c66259" }}
+        style={{ color: titlecolor, fontSize: titlesize }}
       >
         Mekatronik Mühendisi
       </h2>

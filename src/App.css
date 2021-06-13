@@ -1,6 +1,6 @@
 .maincontainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background: #ada996; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -27,10 +27,95 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100px;
+  width: auto;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  overflow: scroll;
+}
+
+.icons {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  list-style: none;
+}
+.icons > li {
+  margin-top: 15px;
+}
+
+/*HEADER MENU*/
+.headerchange {
+  cursor: pointer;
+
+  transition: width ease 0.6s;
+}
+
+.headermenu {
+  width: 100%;
+  height: auto;
+}
+/*PHOTO*/
+.photomenu {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoicons {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #eaeaea;
+}
+/*FONT MENU*/
+.fontmenu {
+  width: 100%;
+  height: auto;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*CHOOSE BACKGROUND COLOR*/
+.backgroundcolormenu {
+  width: 100%;
+  height: auto;
+  background-color: #eaeaea;
+}
+.colorbuttons {
+  border-radius: 50%;
+  border: 0px;
+  width: 30px;
+  height: 30px;
+  margin-left: 2%;
+  cursor: pointer;
+}
+
+.hexcodecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: yellow;
+}
+
+/*NAME MENU*/
+.namemenu {
+  width: 100%;
+  height: auto;
+  background-color: #eaeaea;
+}
+
+/*TITLE MENU*/
+.titlemenu {
+  width: 100%;
+  height: auto;
+  background-color: #eaeaea;
 }

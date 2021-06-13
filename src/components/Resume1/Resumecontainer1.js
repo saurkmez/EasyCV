@@ -10,40 +10,57 @@ import Contact from "./Contact";
 import Languages from "./Language/Languages";
 import Education from "./Education/Education";
 
-function Resumecontainer1() {
+function Resumecontainer1({
+  photo,
+  setPhoto,
+  namecolor,
+  backgroundcolor,
+  titlecolor,
+  brandfontsize,
+  brandcolor,
+  titlesize,
+  namesize,
+  font,
+}) {
   return (
-    <div className="resumecontainer">
+    <div className="resumecontainer" style={{ fontFamily: font }}>
       <div className="subresumecontainer">
-        <div className="resumeheader">
+        <div
+          className="resumeheader"
+          style={{ backgroundColor: backgroundcolor }}
+        >
           {" "}
-          <Photo />
+          <Photo photo={photo} setPhoto={setPhoto} />
           <div className="headerrightside">
-            <Name />
-            <Title />
+            <Name namecolor={namecolor} namesize={namesize} />
+            <Title titlecolor={titlecolor} titlesize={titlesize} />
           </div>
         </div>
         <div>
-          <Profile />
+          <Profile brandfontsize={brandfontsize} brandcolor={brandcolor} />
         </div>
         <hr />
         <div>
-          <Workexperience />
+          <Workexperience
+            brandfontsize={brandfontsize}
+            brandcolor={brandcolor}
+          />
         </div>
         <hr />
         <div>
-          <Skills />
+          <Skills brandfontsize={brandfontsize} brandcolor={brandcolor} />
         </div>
         <hr />
         <div>
-          <Languages />
+          <Languages brandfontsize={brandfontsize} brandcolor={brandcolor} />
         </div>
         <hr />
         <div>
-          <Education />
+          <Education brandfontsize={brandfontsize} brandcolor={brandcolor} />
         </div>
         <hr />
         <div>
-          <Contact />
+          <Contact brandfontsize={brandfontsize} brandcolor={brandcolor} />
         </div>
       </div>
     </div>

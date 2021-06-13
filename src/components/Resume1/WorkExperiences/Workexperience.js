@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Addexperience from "./Addexperience";
 
-function Workexperience() {
+function Workexperience({ brandfontsize, brandcolor }) {
   const [add, setAdd] = useState([]);
   const submitHandler = (e) => {
     e.preventDefault();
@@ -10,7 +10,13 @@ function Workexperience() {
   return (
     <div className="experiencestage">
       <div className="experienceheader">
-        <h2>Work Experience</h2>
+        <h2
+          contentEditable="true"
+          spellCheck="false"
+          style={{ fontSize: brandfontsize, color: brandcolor }}
+        >
+          Work Experience
+        </h2>
 
         <i
           onClick={submitHandler}

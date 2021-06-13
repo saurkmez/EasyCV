@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Addlanguage from "./Addlanguage";
-function Languages() {
+function Languages({ brandfontsize, brandcolor }) {
   const [language, setLanguage] = useState([]);
   const languageHandler = () => {
     setLanguage([...language, <Addlanguage />]);
@@ -9,7 +9,11 @@ function Languages() {
     <div className="languagestage">
       <div className="languageheader">
         {" "}
-        <h2 contentEditable="true" spellCheck="false">
+        <h2
+          contentEditable="true"
+          spellCheck="false"
+          style={{ fontSize: brandfontsize, color: brandcolor }}
+        >
           Languages
         </h2>
         <i

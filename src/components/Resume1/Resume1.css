@@ -8,6 +8,7 @@
   height: 100%;
   margin-top: 2%;
   margin-bottom: 2%;
+  margin-right: 5%;
 }
 .subresumecontainer {
   margin: 5%;
@@ -15,7 +16,6 @@
 /*HEADER*/
 
 .resumeheader {
-  background-color: #223238;
   width: 100%;
   height: 30%;
   display: flex;
@@ -27,24 +27,16 @@
   width: 27%;
   height: auto;
   display: flex;
-  background-image: image();
   justify-content: center;
+  background-repeat: no-repeat;
 }
 .photo {
   width: 100%;
   height: 200px;
   display: flex;
-  align-items: top;
-}
-.addbuttoncontainer {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  opacity: 0;
-  transition: opacity 1s;
+  background-color: #c66259;
 }
 
 .addbuttoncontainer:hover {
@@ -101,7 +93,7 @@ input[type="file"] {
 
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: #c66259;
 }
 .experiencedescription {

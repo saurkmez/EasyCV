@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Addskill from "./Addskill";
 
-function Skills() {
+function Skills({ brandfontsize, brandcolor }) {
   const [skill, addSkill] = useState([]);
   const addSkillHandler = (e) => {
     e.preventDefault();
@@ -11,7 +11,11 @@ function Skills() {
     <div className="skillstage">
       <div className="skillheader">
         {" "}
-        <h2 contentEditable="true" spellCheck="false">
+        <h2
+          contentEditable="true"
+          spellCheck="false"
+          style={{ fontSize: brandfontsize, color: brandcolor }}
+        >
           Skills
         </h2>
         <i

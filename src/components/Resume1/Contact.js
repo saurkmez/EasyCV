@@ -1,10 +1,14 @@
 import React from "react";
-function Contact() {
+function Contact({ brandfontsize, brandcolor }) {
   return (
     <div className="contactstage">
       <div className="contactheader">
         {" "}
-        <h2 contentEditable="true" spellCheck="false">
+        <h2
+          contentEditable="true"
+          spellCheck="false"
+          style={{ fontSize: brandfontsize, color: brandcolor }}
+        >
           Contact
         </h2>
       </div>
