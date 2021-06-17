@@ -1,7 +1,8 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Download from "./components/Resume1/Sidebar/Download";
 import Resumecontainer1 from "./components/Resume1/Resumecontainer1";
+import ReactToPrint from "react-to-print";
 
 function App() {
   const [photo, setPhoto] = useState("");
@@ -13,6 +14,8 @@ function App() {
   const [titlesize, settitlesize] = useState("20px");
   const [namesize, setnamesize] = useState("30px");
   const [font, setFont] = useState("Libre Baskerville");
+
+  const componentRef = useRef();
 
   return (
     <div className="maincontainer">
@@ -27,6 +30,11 @@ function App() {
         settitlesize={settitlesize}
         setnamesize={setnamesize}
         setFont={setFont}
+        font={font}
+      />
+      <ReactToPrint
+        trigger={() => <button>Print this out!</button>}
+        content={() => componentRef.current}
       />
       <Resumecontainer1
         photo={photo}
@@ -39,6 +47,7 @@ function App() {
         titlesize={titlesize}
         namesize={namesize}
         font={font}
+        ref={componentRef}
       />
     </div>
   );

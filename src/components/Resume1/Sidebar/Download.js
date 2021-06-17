@@ -10,6 +10,7 @@ function Download({
   settitlesize,
   setnamesize,
   setFont,
+  font,
 }) {
   const photoHandler = (e) => {
     const selected = e.target.files[0]; //İlk dosyayı alır
@@ -63,18 +64,6 @@ function Download({
   const [headercolorpopup, setheadercolorpopup] = useState(false);
   const headercolorpopupHandler = () => {
     setheadercolorpopup(!headercolorpopup);
-  };
-
-  /* FONT */
-
-  const libreHandler = () => {
-    setFont("Libre Baskerville");
-    console.log("sss");
-  };
-
-  const balooHandler = () => {
-    setFont("Baloo Tammudu 2");
-    console.log("sss");
   };
 
   /*BACKGROUND COLOR*/
@@ -273,19 +262,21 @@ function Download({
                 className="fontmenu"
                 style={{ display: fontpopup ? "block" : "none" }}
               >
-                <select>
-                  <option value="" onClick={libreHandler}>
-                    "Libre Baskerville"
-                  </option>
-                  <option value="" onChange={balooHandler}>
-                    'Baloo Tammudu 2'
-                  </option>
-                  <option value="">'Open Sans'</option>
-                  <option value="">'Raleway'</option>
-                  <option value="">'Roboto'</option>
+                <select
+                  onChange={(e) => setFont(`"${e.target.value}"`)}
+                  defaultValue={font}
+                >
+                  <option value="Libre Baskerville">"Libre Baskerville"</option>
+                  <option value="Baloo Tammudu 2">'Baloo Tammudu 2'</option>
+                  <option value="Open Sans">'Open Sans'</option>
+                  <option value="Raleway">'Raleway'</option>
+                  <option value="Roboto">'Roboto'</option>
                 </select>
                 <p>or add a custom font</p>
-                <input type="text" />
+                <input
+                  type="text"
+                  onChange={(e) => setFont(`"${e.target.value}"`)}
+                />
               </div>
             </li>
             <li>
