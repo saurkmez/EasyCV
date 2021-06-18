@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Photo from "./Header/Photo";
 import Name from "./Header/Name";
 import Title from "./Header/Title";

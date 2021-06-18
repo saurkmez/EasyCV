@@ -33,15 +33,8 @@ function Download({
   };
 
   /*POPUP*/
-  const [template, setTemplate] = useState(false);
-  const templateHandler = () => {
-    setTemplate(!template);
-  };
-
   const [photopopup, setPhotoPopup] = useState(false);
-  const photopopupHandler = () => {
-    setPhotoPopup(!photopopup);
-  };
+  const [photoactive, setPhotoActive] = useState(false);
   const [fontpopup, setfontpopup] = useState(false);
   const fontHandler = () => {
     setfontpopup(!fontpopup);
@@ -185,42 +178,12 @@ function Download({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
+                  background: photoactive ? "red" : "",
                 }}
-                onClick={templateHandler}
-              >
-                Choose Template<i class="fas fa-arrow-right"></i>
-              </p>
-
-              <div
-                className="photomenu"
-                style={{ display: template ? "block" : "none" }}
-              >
-                <div className="photoicons">
-                  <label htmlFor="fileupload">
-                    <i
-                      className="fas fa-upload fa-2x"
-                      style={{ cursor: "pointer" }}
-                    ></i>
-                  </label>
-                  <input type="file" id="fileupload" onChange={photoHandler} />
-                  <i
-                    className="fas fa-trash fa-2x"
-                    onClick={removeHandler}
-                    style={{ cursor: "pointer" }}
-                  ></i>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <p
-                style={{
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
+                onClick={() => {
+                  setPhotoPopup(!photopopup);
+                  setPhotoActive(!photoactive);
                 }}
-                onClick={photopopupHandler}
               >
                 Change Photo<i class="fas fa-arrow-right"></i>
               </p>
