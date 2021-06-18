@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useRef } from "react";
 import Download from "./components/Resume1/Sidebar/Download";
 import Resumecontainer1 from "./components/Resume1/Resumecontainer1";
-import ReactToPrint from "react-to-print";
+import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 
 function App() {
   const [photo, setPhoto] = useState("");
@@ -15,8 +15,11 @@ function App() {
   const [namesize, setnamesize] = useState("30px");
   const [font, setFont] = useState("Libre Baskerville");
 
-  const componentRef = useRef();
-
+  const pdfexportcomponent = useRef(null);
+  const exportpdfhandler = (event) => {
+    pdfexportcomponent.current.save();
+    console.log("clicked");
+  };
   return (
     <div className="maincontainer">
       <Download
@@ -32,23 +35,22 @@ function App() {
         setFont={setFont}
         font={font}
       />
-      <ReactToPrint
-        trigger={() => <button>Print this out!</button>}
-        content={() => componentRef.current}
-      />
-      <Resumecontainer1
-        photo={photo}
-        setPhoto={setPhoto}
-        backgroundcolor={backgroundcolor}
-        namecolor={namecolor}
-        titlecolor={titlecolor}
-        brandfontsize={brandfontsize}
-        brandcolor={brandcolor}
-        titlesize={titlesize}
-        namesize={namesize}
-        font={font}
-        ref={componentRef}
-      />
+
+      <PDFExport ref={pdfexportcomponent} paperSize="A4" scale={0.4}>
+        <Resumecontainer1
+          photo={photo}
+          setPhoto={setPhoto}
+          backgroundcolor={backgroundcolor}
+          namecolor={namecolor}
+          titlecolor={titlecolor}
+          brandfontsize={brandfontsize}
+          brandcolor={brandcolor}
+          titlesize={titlesize}
+          namesize={namesize}
+          font={font}
+        />
+      </PDFExport>
+      <button onClick={exportpdfhandler}>aaaaaaaaaaa</button>
     </div>
   );
 }

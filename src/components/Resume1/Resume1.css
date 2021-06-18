@@ -5,6 +5,7 @@
   margin-top: 2%;
   margin-bottom: 2%;
   margin-right: 5%;
+  margin-left: 20%;
 }
 .subresumecontainer {
   margin: 5%;
@@ -215,4 +216,12 @@ input[type="file"] {
   width: 100%;
   display: flex;
   align-items: center;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
 }
