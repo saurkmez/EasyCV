@@ -36,7 +36,12 @@ function App() {
         font={font}
       />
 
-      <PDFExport ref={pdfexportcomponent} paperSize="A4" scale={0.4}>
+      <PDFExport
+        ref={pdfexportcomponent}
+        paperSize="A4"
+        scale={0.5}
+        margin={-100}
+      >
         <Resumecontainer1
           photo={photo}
           setPhoto={setPhoto}
