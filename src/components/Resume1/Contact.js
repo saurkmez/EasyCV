@@ -15,7 +15,7 @@ function Contact({ brandfontsize, brandcolor }) {
       <div className="contactdescription">
         <div className="mail">
           <i
-            class="far fa-envelope-open fa-2x"
+            class="far fa-envelope-open fa-1x"
             style={{ color: "#c66259" }}
           ></i>
           <p
@@ -24,28 +24,28 @@ function Contact({ brandfontsize, brandcolor }) {
             style={{ marginLeft: "10px" }}
           >
             {" "}
-            mail
+            E-Mail
           </p>
         </div>
         <div className="mail">
-          <i class="far fa-compass  fa-2x" style={{ color: "#c66259" }}></i>
+          <i class="far fa-compass  fa-1x" style={{ color: "#c66259" }}></i>
           <p
             contentEditable="true"
             spellCheck="false"
             style={{ marginLeft: "10px" }}
           >
-            konum
+            Location
           </p>
         </div>
 
         <div className="mail">
-          <i class="fas fa-phone-volume fa-2x" style={{ color: "#c66259" }}></i>
+          <i class="fas fa-phone-volume fa-1x" style={{ color: "#c66259" }}></i>
           <p
             contentEditable="true"
             spellCheck="false"
             style={{ marginLeft: "10px" }}
           >
-            telefon
+            Phone
           </p>
         </div>
       </div>

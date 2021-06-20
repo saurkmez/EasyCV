@@ -8,7 +8,7 @@ function App() {
   const [backgroundcolor, setBackgroundColor] = useState("#223238");
   const [namecolor, setNameColor] = useState("white");
   const [titlecolor, setTitleColor] = useState("#c66259");
-  const [brandfontsize, setBrandFontSize] = useState("20px");
+  const [brandfontsize, setBrandFontSize] = useState("18px");
   const [brandcolor, setbrandcolor] = useState("#c66259");
   const [titlesize, settitlesize] = useState("20px");
   const [namesize, setnamesize] = useState("30px");

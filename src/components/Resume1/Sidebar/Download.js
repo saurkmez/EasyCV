@@ -34,7 +34,7 @@ function Download({
 
   /*POPUP*/
   const [photopopup, setPhotoPopup] = useState(false);
-  const [photoactive, setPhotoActive] = useState(false);
+  const [active, setActive] = useState(false);
   const [fontpopup, setfontpopup] = useState(false);
   const fontHandler = () => {
     setfontpopup(!fontpopup);
@@ -150,7 +150,10 @@ function Download({
   const hexcodebrandchangeHandler = (e) => {
     setbrandcolor(`#${e.target.value}`);
   };
-
+  const print = () => {
+    window.print();
+    return false;
+  };
   return (
     <div className="downloadcontainer">
       <div className="icons">
@@ -160,37 +163,44 @@ function Download({
             justifyContent: "center",
             cursor: "pointer",
           }}
+          onClick={print}
         >
           <i class="far fa-save fa-3x"></i>
         </li>
         <li>
-          <h3
+          <h2
             className="headerchange"
-            style={{ display: "flex", justifyContent: "center" }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              color: "#c66259",
+            }}
           >
-            Customize Me
-          </h3>
+            Customize It!
+          </h2>
           <div className="headermenu" style={{ display: "block" }}>
             <li>
-              <p
+              <h4
                 style={{
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  background: photoactive ? "red" : "",
+                  transition: photopopup ? "1s" : "",
                 }}
                 onClick={() => {
                   setPhotoPopup(!photopopup);
-                  setPhotoActive(!photoactive);
+                  setActive(!active);
                 }}
               >
-                Change Photo<i class="fas fa-arrow-right"></i>
-              </p>
+                Change Photo
+              </h4>
 
               <div
                 className="photomenu"
-                style={{ display: photopopup ? "block" : "none" }}
+                style={{
+                  display: photopopup ? "block" : "none",
+                }}
               >
                 <div className="photoicons">
                   <label htmlFor="fileupload">
@@ -209,7 +219,7 @@ function Download({
               </div>
             </li>
             <li>
-              <p
+              <h4
                 style={{
                   cursor: "pointer",
                   display: "flex",
@@ -218,8 +228,8 @@ function Download({
                 }}
                 onClick={fontHandler}
               >
-                Choose Font<i class="fas fa-arrow-right"></i>
-              </p>
+                Choose Font
+              </h4>
 
               <div
                 className="fontmenu"
@@ -228,22 +238,47 @@ function Download({
                 <select
                   onChange={(e) => setFont(`"${e.target.value}"`)}
                   defaultValue={font}
+                  style={{
+                    fontSize: "15px",
+                    borderRadius: "5px",
+                  }}
                 >
-                  <option value="Libre Baskerville">"Libre Baskerville"</option>
-                  <option value="Baloo Tammudu 2">'Baloo Tammudu 2'</option>
-                  <option value="Open Sans">'Open Sans'</option>
-                  <option value="Raleway">'Raleway'</option>
-                  <option value="Roboto">'Roboto'</option>
+                  <option
+                    value="Libre Baskerville"
+                    style={{
+                      fontFamily: "Libre Baskerville",
+
+                      width: "50%",
+                    }}
+                  >
+                    Libre Baskerville
+                  </option>
+                  <option
+                    value="Baloo Tammudu 2"
+                    style={{ fontFamily: "Baloo Tammudu 2" }}
+                  >
+                    Baloo Tammudu 2
+                  </option>
+                  <option value="Open Sans" style={{ fontFamily: "Open Sans" }}>
+                    Open Sans
+                  </option>
+                  <option value="Raleway" style={{ fontFamily: "Raleway" }}>
+                    Raleway
+                  </option>
+                  <option value="Roboto" style={{ fontFamily: "Roboto" }}>
+                    Roboto
+                  </option>
                 </select>
                 <p>or add a custom font</p>
                 <input
                   type="text"
+                  style={{ borderRadius: "5px" }}
                   onChange={(e) => setFont(`"${e.target.value}"`)}
                 />
               </div>
             </li>
             <li>
-              <p
+              <h4
                 style={{
                   cursor: "pointer",
                   display: "flex",
@@ -252,8 +287,8 @@ function Download({
                 }}
                 onClick={backgroundcolorpopupHandler}
               >
-                Brand Color<i class="fas fa-arrow-right"></i>
-              </p>
+                Brand Color
+              </h4>
 
               <div
                 className="backgroundcolormenu"
@@ -284,7 +319,7 @@ function Download({
                   title="Orange"
                   onClick={orangeHandler}
                 ></button>
-                <p>or enter hex code</p>
+                <h5>or enter hex code</h5>
                 <div>
                   <p>
                     #{" "}
@@ -292,13 +327,14 @@ function Download({
                       type="text"
                       style={{ width: "60%" }}
                       onChange={hexcodechangeHandler}
+                      style={{ borderRadius: "5px" }}
                     />
                   </p>
                 </div>
               </div>
             </li>
             <li>
-              <p
+              <h4
                 onClick={namecolorpopupHandler}
                 style={{
                   cursor: "pointer",
@@ -307,8 +343,8 @@ function Download({
                   justifyContent: "space-between",
                 }}
               >
-                Name Color&Font-Size <i class="fas fa-arrow-right"></i>{" "}
-              </p>
+                Name Color&Font-Size
+              </h4>
 
               <div
                 className="namemenu"
@@ -347,20 +383,26 @@ function Download({
                       type="text"
                       style={{ width: "60%" }}
                       onChange={hexcodenamechangeHandler}
+                      style={{ borderRadius: "5px" }}
                     />
                   </p>
                 </div>
                 <p>Choose Font Size</p>
                 <input
                   type="text"
-                  style={{ width: "60%", marginLeft: "10%" }}
+                  style={{ width: "60%" }}
                   onChange={namefontsizeHandler}
+                  style={{
+                    borderRadius: "5px",
+                    width: "30%",
+                    marginRight: "5%",
+                  }}
                 />
                 px
               </div>
             </li>
             <li>
-              <p
+              <h4
                 style={{
                   cursor: "pointer",
                   display: "flex",
@@ -369,8 +411,8 @@ function Download({
                 }}
                 onClick={titlecolorpopupHandler}
               >
-                Title Color&Font-Size<i class="fas fa-arrow-right"></i>
-              </p>
+                Title Color&Font-Size
+              </h4>
 
               <div
                 className="titlemenu"
@@ -409,12 +451,18 @@ function Download({
                       type="text"
                       style={{ width: "60%" }}
                       onChange={hexcodetitlechangeHandler}
+                      style={{ borderRadius: "5px" }}
                     />
                   </p>
                   <p>Choose Font Size</p>
                   <input
                     type="text"
-                    style={{ width: "60%", marginLeft: "10%" }}
+                    style={{
+                      width: "60%",
+                      width: "30%",
+                      marginRight: "5%",
+                      borderRadius: "5px",
+                    }}
                     onChange={titlefontsizeHandler}
                   />
                   px
@@ -422,21 +470,26 @@ function Download({
               </div>
             </li>
             <li>
-              <p
+              <h4
                 style={{
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
+                  paddingBottom: headercolorpopup ? "" : "5%",
                 }}
                 onClick={headercolorpopupHandler}
               >
-                Header Color & Font-Size<i class="fas fa-arrow-right"></i>
-              </p>
+                Header Color & Font-Size
+              </h4>
 
               <div
                 className="titlemenu"
-                style={{ display: headercolorpopup ? "block" : "none" }}
+                style={{
+                  display: headercolorpopup ? "block" : "none",
+                  paddingLeft: "5%",
+                  marginBottom: "20%",
+                }}
               >
                 <p>Choose a color</p>
                 <button
@@ -469,14 +522,19 @@ function Download({
                     #{" "}
                     <input
                       type="text"
-                      style={{ width: "60%" }}
+                      style={{ width: "60%", borderRadius: "5px" }}
                       onChange={hexcodebrandchangeHandler}
                     />
                   </p>
                   <p>Choose Font Size</p>
                   <input
                     type="text"
-                    style={{ width: "60%", marginLeft: "10%" }}
+                    style={{
+                      width: "60%",
+                      width: "30%",
+                      marginRight: "5%",
+                      borderRadius: "5px",
+                    }}
                     onChange={headerfontsizeHandler}
                   />
                   px
