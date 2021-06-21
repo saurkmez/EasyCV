@@ -236,6 +236,8 @@ input[type="file"] {
     margin: 0;
     box-shadow: 0 0 0 0;
     padding: 2%;
+    margin-top: -5%;
+    padding-left: 0;
   }
 
   .experienceheader > i {
