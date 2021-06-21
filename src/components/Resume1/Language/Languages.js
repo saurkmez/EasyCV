@@ -13,6 +13,7 @@ function Languages({ brandfontsize, brandcolor }) {
           contentEditable="true"
           spellCheck="false"
           style={{ fontSize: brandfontsize, color: brandcolor }}
+          suppressContentEditableWarning={true}
         >
           Languages
         </h2>

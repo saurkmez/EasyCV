@@ -7,8 +7,9 @@ function Title({ titlecolor, titlesize }) {
         contentEditable="true"
         spellCheck="false"
         style={{ color: titlecolor, fontSize: titlesize }}
+        suppressContentEditableWarning={true}
       >
-        Mekatronik Mühendisi
+        Title
       </h2>
     </div>
   );

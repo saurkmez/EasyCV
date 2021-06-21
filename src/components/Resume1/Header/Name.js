@@ -7,8 +7,9 @@ function Name({ namecolor, namesize }) {
         contentEditable="true"
         spellCheck="false"
         style={{ color: namecolor, fontSize: namesize }}
+        suppressContentEditableWarning={true}
       >
-        Alper Ürkmez
+        Full Name
       </h1>
     </div>
   );

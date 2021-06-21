@@ -14,6 +14,7 @@ function Workexperience({ brandfontsize, brandcolor }) {
           contentEditable="true"
           spellCheck="false"
           style={{ fontSize: brandfontsize, color: brandcolor }}
+          suppressContentEditableWarning={true}
         >
           Work Experience
         </h2>

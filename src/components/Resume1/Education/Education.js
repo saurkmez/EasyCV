@@ -15,6 +15,7 @@ function Education({ brandfontsize, brandcolor }) {
           contentEditable="true"
           spellCheck="false"
           style={{ fontSize: brandfontsize, color: brandcolor }}
+          suppressContentEditableWarning={true}
         >
           Education
         </h2>

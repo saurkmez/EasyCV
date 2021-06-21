@@ -11,12 +11,17 @@ function Profile({ brandfontsize, brandcolor }) {
             fontSize: brandfontsize,
             color: brandcolor,
           }}
+          suppressContentEditableWarning={true}
         >
           Profile
         </h2>
       </div>
       <div className="profiledescription">
-        <p contentEditable="true" spellCheck="false">
+        <p
+          contentEditable="true"
+          spellCheck="false"
+          suppressContentEditableWarning={true}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis
           posuere quam. Curabitur dapibus magna ac nisl venenatis laoreet. Nulla
           pharetra pretium neque, sed fermentum libero commodo elementum. In

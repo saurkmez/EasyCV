@@ -8,6 +8,7 @@ function Contact({ brandfontsize, brandcolor }) {
           contentEditable="true"
           spellCheck="false"
           style={{ fontSize: brandfontsize, color: brandcolor }}
+          suppressContentEditableWarning={true}
         >
           Contact
         </h2>
@@ -15,35 +16,41 @@ function Contact({ brandfontsize, brandcolor }) {
       <div className="contactdescription">
         <div className="mail">
           <i
-            class="far fa-envelope-open fa-1x"
+            className="far fa-envelope-open fa-1x"
             style={{ color: "#c66259" }}
           ></i>
           <p
             contentEditable="true"
             spellCheck="false"
             style={{ marginLeft: "10px" }}
+            suppressContentEditableWarning={true}
           >
             {" "}
             E-Mail
           </p>
         </div>
         <div className="mail">
-          <i class="far fa-compass  fa-1x" style={{ color: "#c66259" }}></i>
+          <i className="far fa-compass  fa-1x" style={{ color: "#c66259" }}></i>
           <p
             contentEditable="true"
             spellCheck="false"
             style={{ marginLeft: "10px" }}
+            suppressContentEditableWarning={true}
           >
             Location
           </p>
         </div>
 
         <div className="mail">
-          <i class="fas fa-phone-volume fa-1x" style={{ color: "#c66259" }}></i>
+          <i
+            className="fas fa-phone-volume fa-1x"
+            style={{ color: "#c66259" }}
+          ></i>
           <p
             contentEditable="true"
             spellCheck="false"
             style={{ marginLeft: "10px" }}
+            suppressContentEditableWarning={true}
           >
             Phone
           </p>

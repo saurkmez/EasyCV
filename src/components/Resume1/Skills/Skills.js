@@ -15,6 +15,7 @@ function Skills({ brandfontsize, brandcolor }) {
           contentEditable="true"
           spellCheck="false"
           style={{ fontSize: brandfontsize, color: brandcolor }}
+          suppressContentEditableWarning={true}
         >
           Skills
         </h2>

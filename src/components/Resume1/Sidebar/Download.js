@@ -165,7 +165,7 @@ function Download({
           }}
           onClick={print}
         >
-          <i class="far fa-save fa-3x"></i>
+          <i className="far fa-save fa-3x"></i>
         </li>
         <li>
           <h2

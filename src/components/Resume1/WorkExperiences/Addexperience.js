@@ -8,14 +8,19 @@ function Addexperience() {
   };
   return (
     <div>
-      <h3 contentEditable="true" spellCheck="false">
-        Company
+      <h3
+        contentEditable="true"
+        spellCheck="false"
+        suppressContentEditableWarning={true}
+      >
+        Company Name
       </h3>
       <div className="jobtitledate">
         <h4
           contentEditable="true"
           spellCheck="false"
           style={{ color: "#c66259" }}
+          suppressContentEditableWarning={true}
         >
           Title
         </h4>
@@ -23,6 +28,7 @@ function Addexperience() {
           contentEditable="true"
           spellCheck="false"
           style={{ color: "#c66259" }}
+          suppressContentEditableWarning={true}
         >
           Date
         </h3>
