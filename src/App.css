@@ -146,6 +146,8 @@
   animation: fade-in 0.5s;
 }
 
+/*footer*/
+
 /* width */
 .downloadcontainer::-webkit-scrollbar {
   width: 10px;

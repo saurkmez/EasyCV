@@ -287,7 +287,7 @@ function Download({
                 }}
                 onClick={backgroundcolorpopupHandler}
               >
-                Brand Color
+                Header Color
               </h4>
 
               <div
@@ -480,7 +480,7 @@ function Download({
                 }}
                 onClick={headercolorpopupHandler}
               >
-                Header Color & Font-Size
+                Section Color & Font-Size
               </h4>
 
               <div
