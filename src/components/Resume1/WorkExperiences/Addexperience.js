@@ -8,13 +8,13 @@ function Addexperience() {
   };
   return (
     <div>
-      <h3
+      <h4
         contentEditable="true"
         spellCheck="false"
         suppressContentEditableWarning={true}
       >
         Company Name
-      </h3>
+      </h4>
       <div className="jobtitledate">
         <h4
           contentEditable="true"
