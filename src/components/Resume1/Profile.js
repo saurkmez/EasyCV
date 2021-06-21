@@ -7,7 +7,10 @@ function Profile({ brandfontsize, brandcolor }) {
         <h2
           contentEditable="true"
           spellCheck="false"
-          style={{ fontSize: brandfontsize, color: brandcolor }}
+          style={{
+            fontSize: brandfontsize,
+            color: brandcolor,
+          }}
         >
           Profile
         </h2>

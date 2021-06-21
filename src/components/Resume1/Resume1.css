@@ -1,7 +1,7 @@
 .resumecontainer {
   background-color: #ffffff;
   width: 210mm;
-  min-height: 297mm;
+  min-height: auto;
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: 10%;
@@ -46,7 +46,7 @@ input[type="file"] {
 .headerrightside {
   width: 50%;
   height: auto;
-  margin-left: 4%;
+  margin-left: 7%;
 }
 .namecontainer > h2 {
   width: 100%;
@@ -76,9 +76,10 @@ input[type="file"] {
   max-width: 70%;
 }
 .profiledescription {
-  width: 80%;
+  width: 72%;
   height: 100%;
-
+  margin-left: 0;
+  padding: 0;
   display: flex;
   align-items: center;
 }
@@ -102,11 +103,12 @@ input[type="file"] {
   justify-content: space-between;
   color: #c66259;
 }
+
 .experienceheader h2 {
   max-width: 60%;
 }
 .experiencedescription {
-  width: 80%;
+  width: 72%;
   height: auto;
 }
 .jobtitledate {
@@ -148,7 +150,7 @@ input[type="file"] {
   color: #c66259;
 }
 .skilldescription {
-  width: 80%;
+  width: 72%;
   height: auto;
 
   columns: 2;
@@ -169,7 +171,7 @@ input[type="file"] {
   color: #c66259;
 }
 .languagedescription {
-  width: 80%;
+  width: 72%;
   height: auto;
 }
 .addlanguagecontainer {
@@ -192,7 +194,7 @@ input[type="file"] {
   color: #c66259;
 }
 .educationdescription {
-  width: 80%;
+  width: 72%;
   height: auto;
 }
 /*CONTACT*/
@@ -210,7 +212,7 @@ input[type="file"] {
   color: #c66259;
 }
 .contactdescription {
-  width: 80%;
+  width: 72%;
   height: auto;
 }
 .mail {
@@ -224,6 +226,33 @@ input[type="file"] {
     font-size: 10px;
     padding-top: 0;
     margin: 0;
+
     padding: 2%;
+  }
+
+  .experienceheader > i {
+    display: none;
+  }
+  .addlistpluscontainer > i {
+    display: none;
+  }
+  .skillheader > i {
+    display: none;
+  }
+  .languageheader > i {
+    display: none;
+  }
+  .educationheader > i {
+    display: none;
+  }
+  .print:last-child {
+    page-break-after: auto;
+  }
+  @page :footer {
+    display: none;
+  }
+
+  @page :header {
+    display: none;
   }
 }

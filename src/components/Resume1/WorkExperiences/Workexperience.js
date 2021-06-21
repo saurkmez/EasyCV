@@ -24,7 +24,7 @@ function Workexperience({ brandfontsize, brandcolor }) {
           style={{ marginRight: "10%" }}
         ></i>
       </div>
-      <div className="experiencedescription">
+      <div className="experiencedescription" style={{ marginBottom: "2%" }}>
         <Addexperience />
         {add.map((experiences) => (
           <Addexperience />

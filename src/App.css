@@ -66,6 +66,7 @@
   height: auto;
   text-align: center;
   text-shadow: 2px 2px 2px grey;
+  animation: fade-in 0.5s;
 }
 
 .photoicons {
@@ -88,6 +89,7 @@
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   padding-left: 5%;
+  animation: fade-in 0.5s;
 }
 
 /*CHOOSE BACKGROUND COLOR*/
@@ -100,6 +102,7 @@
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   padding-left: 5%;
+  animation: fade-in 0.5s;
 }
 .colorbuttons {
   border-radius: 50%;
@@ -127,6 +130,7 @@
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   padding-left: 5%;
+  animation: fade-in 0.5s;
 }
 
 /*TITLE MENU*/
@@ -135,10 +139,11 @@
   height: auto;
   background-color: #eaeaea;
   padding-bottom: 10%;
-  padding-top: 10%;
+  padding-top: 5%;
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   padding-left: 5%;
+  animation: fade-in 0.5s;
 }
 
 /* width */
@@ -187,5 +192,28 @@
   .downloadcontainer,
   .downloadcontainer * {
     display: none !important;
+  }
+  .maincontainer {
+    height: 99%;
+  }
+}
+
+/*Menu Animations */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

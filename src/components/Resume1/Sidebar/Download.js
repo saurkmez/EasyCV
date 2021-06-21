@@ -476,7 +476,7 @@ function Download({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  paddingBottom: headercolorpopup ? "" : "5%",
+                  marginBottom: headercolorpopup ? "0" : "20%",
                 }}
                 onClick={headercolorpopupHandler}
               >
