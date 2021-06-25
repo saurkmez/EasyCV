@@ -1,8 +1,11 @@
+![Alt Text](https://media.giphy.com/media/B9zlLprZbLayvNt8We/giphy.gif)
+
+
 ### 1.`npm install`
 
-### 2.`npm start`
+### 2.`cd resume`
 
-![Alt Text](https://media.giphy.com/media/B9zlLprZbLayvNt8We/giphy.gif)
+### 2.`npm start`
 
 
 
